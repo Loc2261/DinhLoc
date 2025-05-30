@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenere Cipher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <tr>
+                <td style="text-align: center; font-weight: bold; font-size: 25px;">VIGENERE CIPHER</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: blue;">ENCRYPTION</td>
+            </tr>
+            <tr>
+                <td>
+                    <form method="POST" action="/api/vigenere/encrypt">
+                        <div class="mb-3">
+                            <label for="vigenerePlainText" class="form-label">Plain text:</label>
+                            <input type="text" class="form-control" id="vigenerePlainText" name="plain_text" placeholder="Input Plain Text" required autofocus/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="vigenereKeyEncrypt" class="form-label">Key (text):</label>
+                            <input type="text" class="form-control" id="vigenereKeyEncrypt" name="key" placeholder="Input Text Key" required/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Encrypt</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: blue;">DECRYPTION</td>
+            </tr>
+            <tr>
+                <td>
+                    <form method="POST" action="/api/vigenere/decrypt">
+                        <div class="mb-3">
+                            <label for="vigenereCipherText" class="form-label">Cipher text:</label>
+                            <input type="text" class="form-control" id="vigenereCipherText" name="cipher_text" placeholder="Input Cipher Text" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="vigenereKeyDecrypt" class="form-label">Key (text):</label>
+                            <input type="text" class="form-control" id="vigenereKeyDecrypt" name="key" placeholder="Input Text Key" required/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Decrypt</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
